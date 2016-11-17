@@ -26,7 +26,7 @@
    */
   function getRepo(api, url){
     return $.ajax({
-      url:url,
+      url:url.split("{")[0],
       method: "GET",
       dataType: "json",
       headers: {
