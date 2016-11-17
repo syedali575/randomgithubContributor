@@ -15,7 +15,16 @@
       console.log(query);
 
 
-      window.random.getData(api, query);
+      window.random.searchRepo(api, query)
+      
+      .done(function handleSuccess(data){
+        console.log("It worked", data);
+        // return promise
+      })
+      // add another done
+      .fail(function handleFailure(xhr){
+        console.log("Unable to communicate", xhr);
+      });
 
     });
 

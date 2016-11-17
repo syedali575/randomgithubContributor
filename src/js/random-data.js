@@ -2,12 +2,12 @@
   'use strict';
 
     window.random = window.random || {};
-    window.random.getData = getData;
+    window.random.searchRepo = searchRepo;
 
 
-    function getData(api, query){
+    function searchRepo(api, query){
 
-      $.ajax({
+      return $.ajax({
         url:"https://api.github.com/search/repositories?q="+query,
         method: "GET",
         dataType : "json",
@@ -15,13 +15,6 @@
           authorization: "token " + api,
         }
 
-      })
-      .done(function handleSuccess(data){
-        console.log("It worked", data);
-      })
-
-      .fail(function handleFailure(xhr){
-        console.log("Unable to communicate", xhr);
       });
     }
 
