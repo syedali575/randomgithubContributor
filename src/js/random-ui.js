@@ -15,7 +15,7 @@
       console.log(query);
 
 
-      window.random.getData();
+      window.random.getData(api, query);
 
     });
 
