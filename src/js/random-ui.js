@@ -6,32 +6,40 @@
 
 
   $("#search")
-    .on("submit", function findContributor(event){
-      event.preventDefault();
+  .on("submit", function findContributor(event){
+    event.preventDefault();
 
-      var api = $(".api").val();
-      console.log(api);
-      var query = $(".query").val();
-      console.log(query);
+    var api = $(".api").val();
+    console.log(api);
+    var query = $(".query").val();
+    console.log(query);
 
 
-      window.random.searchRepo(api, query)
+    window.random.searchRepo(api, query)
 
-      .done(function handleSuccess(data){
-        console.log("It worked", data);
+    .then(function handleSuccess(data){
+      console.log("It worked", data);
 
-        var pickMe = data.items;
-        var randomPick = pickMe[Math.floor(Math.random() * 30)];
-        console.log(randomPick);
-        console.log(randomPick.commits_url);
-        // return promise
-      })
-      // add another done
-      .fail(function handleFailure(xhr){
-        console.log("Unable to communicate", xhr);
-      });
+      var pickMe = data.items;
+      var randomPick = pickMe[Math.floor(Math.random() * 30)];
+      console.log(randomPick);
+      var url = randomPick.commits_url;
+      console.log(url);
+      var p = window.random.getRepo(api, url);
 
+      return p;
+    })
+
+    .then(function handelPromise(data){
+      console.log("It worked", data);
+    })
+
+
+    .fail(function handleFailure(xhr){
+      console.log("Unable to communicate", xhr);
     });
+
+  });
 
 
 
