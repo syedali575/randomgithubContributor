@@ -2,6 +2,9 @@
   'use strict';
   window.random = window.random || {};
 
+
+
+
   console.log("I am in random");
 
 
@@ -37,7 +40,16 @@
       var author = data[0].commit.author.name;
       console.log(author);
 
-      localStorage.setItem("avatar", avatar );
+      var userInfo = {
+        url: avatar,
+        name: author
+      };
+
+      localStorage.setItem("userInfo", JSON.stringify(userInfo));
+      var storedNames = JSON.parse(localStorage.getItem("userInfo"));
+      console.log(storedNames);
+
+      console.log(userInfo);
 
       $("#contributors ul").append(
         '<li>' +
