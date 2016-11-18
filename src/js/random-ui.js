@@ -37,10 +37,12 @@
       var author = data[0].commit.author.name;
       console.log(author);
 
+      localStorage.setItem("avatar", avatar );
+
       $("#contributors ul").append(
         '<li>' +
-        '<img src="' + avatar +'">'
-        + author + '</li>'
+        '<img src="' + avatar +'">' +
+        " " + author + '</li>'
       );
     })
 
