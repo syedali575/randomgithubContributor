@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   window.random = window.random || {};
-
+      var previousUsers = [];
 
 
 
@@ -45,7 +45,15 @@
         name: author
       };
 
+
+
+      previousUsers.push(userInfo);
+      console.log(previousUsers);
+
+
+
       localStorage.setItem("userInfo", JSON.stringify(userInfo));
+
       var storedNames = JSON.parse(localStorage.getItem("userInfo"));
       console.log(storedNames);
 
