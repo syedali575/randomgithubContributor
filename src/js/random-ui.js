@@ -31,7 +31,15 @@
     })
 
     .then(function handelPromise(data){
-      console.log("It worked", data);
+      console.log("the thing we are doing", data);
+      console.log(data[0].author.avatar_url);
+      var avatar = data[0].author.avatar_url;
+
+      $("#contributors ul").append(
+        '<li>' +
+        '<img src"' + avatar +'">'
+        + '</li>'
+      );
     })
 
 
@@ -43,7 +51,10 @@
 
 
 
-
+  function appendUser(){
+    $("#")
+    .append()
+  }
 
 
 
