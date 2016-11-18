@@ -31,14 +31,16 @@
     })
 
     .then(function handelPromise(data){
-      console.log("the thing we are doing", data);
-      console.log(data[0].author.avatar_url);
+      console.log("It worked", data);
+      // console.log(data[0].author.avatar_url);
       var avatar = data[0].author.avatar_url;
+      var author = data[0].commit.author.name;
+      console.log(author);
 
       $("#contributors ul").append(
         '<li>' +
-        '<img src"' + avatar +'">'
-        + '</li>'
+        '<img src="' + avatar +'">'
+        + author + '</li>'
       );
     })
 
@@ -49,12 +51,6 @@
 
   });
 
-
-
-  function appendUser(){
-    $("#")
-    .append()
-  }
 
 
 
