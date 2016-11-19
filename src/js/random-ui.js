@@ -46,18 +46,18 @@
       };
 
 
-
+      //Pushing userInfo Objects in to the array
       previousUsers.push(userInfo);
-      console.log(previousUsers);
+      console.log("Array with user data",previousUsers);
 
 
 
-      localStorage.setItem("userInfo", JSON.stringify(userInfo));
+      localStorage.setItem("previousUsers", JSON.stringify(previousUsers));
 
-      var storedNames = JSON.parse(localStorage.getItem("userInfo"));
-      console.log(storedNames);
 
-      console.log(userInfo);
+      // var storedNames = JSON.parse(localStorage.getItem("previousUsers"));
+      // console.log(storedNames);
+
 
       $("#contributors ul").append(
         '<li>' +
