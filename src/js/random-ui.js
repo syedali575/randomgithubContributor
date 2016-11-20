@@ -9,19 +9,15 @@
       console.log(storedNames[0].name);
 
 
-      buildList();
+      storedNames.forEach(buildList);
 
       function buildList() {
-        console.log("Running Build List");
         $("#contributors ul").append(
           '<li>' +
-          '<img src="' + storedNames[0].url + '">' +
-          ' ' + storedNames[0].name + '</li>'
+          '<img src="' + storedNames[1].url + '">' +
+          ' ' + storedNames[1].name + '</li>'
         );
       }
-
-
-
 
 
 
@@ -71,13 +67,7 @@
       previousUsers.push(userInfo);
       console.log("Array with user data",previousUsers);
 
-
-
       localStorage.setItem("previousUsers", JSON.stringify(previousUsers));
-
-
-
-
 
       $("#contributors ul").append(
         '<li>' +
@@ -92,19 +82,6 @@
     });
 
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
