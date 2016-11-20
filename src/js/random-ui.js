@@ -4,6 +4,27 @@
       var previousUsers = [];
 
 
+      var storedNames = JSON.parse(localStorage.getItem("previousUsers"));
+      console.log(storedNames[0].url);
+      console.log(storedNames[0].name);
+
+
+      buildList();
+
+      function buildList() {
+        console.log("Running Build List");
+        $("#contributors ul").append(
+          '<li>' +
+          '<img src="' + storedNames[0].url + '">' +
+          ' ' + storedNames[0].name + '</li>'
+        );
+      }
+
+
+
+
+
+
 
   console.log("I am in random");
 
@@ -55,8 +76,7 @@
       localStorage.setItem("previousUsers", JSON.stringify(previousUsers));
 
 
-      // var storedNames = JSON.parse(localStorage.getItem("previousUsers"));
-      // console.log(storedNames);
+
 
 
       $("#contributors ul").append(
@@ -72,7 +92,6 @@
     });
 
   });
-
 
 
 
