@@ -5,20 +5,17 @@
 
 
       var storedNames = JSON.parse(localStorage.getItem("previousUsers"));
-      console.log(storedNames[0].url);
+      console.log(storedNames);
       console.log(storedNames[0].name);
 
 
-      storedNames.forEach(buildList);
-
-      function buildList() {
+      storedNames.forEach(function (item){
         $("#contributors ul").append(
           '<li>' +
-          '<img src="' + storedNames[1].url + '">' +
-          ' ' + storedNames[1].name + '</li>'
+          '<img src="' + item.url + '">' +
+          ' ' + item.name + '</li>'
         );
-      }
-
+      });
 
 
 
