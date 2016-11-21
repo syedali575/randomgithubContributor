@@ -19,11 +19,11 @@
   }
 
   /**
-   * [secondAjax description]
-   * @param  {[type]} api [description]
-   * @param  {[type]} url [description]
-   * @return {Promise}     [description]
-   */
+  * [secondAjax description]
+  * @param  {[type]} api [description]
+  * @param  {[type]} url [description]
+  * @return {Promise}     [description]
+  */
   function getRepo(api, url){
     return $.ajax({
       url:url.split("{")[0],
