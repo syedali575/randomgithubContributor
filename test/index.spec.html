@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Testing RandomgithubContributor</title>
+
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css"  type="text/css">
+
+  </head>
+
+
+  <body>
+
+<main id="mocha">
+
+</main>
+
+
+<script src="../node_modules/mocha/mocha.js"></script>
+<script src="../node_modules/chai/chai.js"></script>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+
+
+
+
+
+<script src="../src/js/random-ui.js"></script>
+<script src="../src/js/random-data.js"></script>
+
+
+<script>
+  mocha.setup("bdd");
+</script>
+
+<script src="../test/specs/random-ui.spec.js"></script>
+<script src="../test/specs/random-data.spec.js"></script>
+
+<script>
+  mocha.run();
+</script>
+
+
+  </body>
+</html>

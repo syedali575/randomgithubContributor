@@ -1,0 +1,36 @@
+{
+  "name": "randomgithubcontributor",
+  "version": "1.0.0",
+  "description": "We need to use new concepts of promises and local storage in this assignment",
+  "main": "gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-mocha": "^1.0.2",
+    "mocha": "^3.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syedali575/randomgithubContributor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syedali575/randomgithubContributor/issues"
+  },
+  "homepage": "https://github.com/syedali575/randomgithubContributor#readme"
+}
